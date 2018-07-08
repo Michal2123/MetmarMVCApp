@@ -1,0 +1,70 @@
+﻿@model IEnumerable<MetmarMVCApp.Models.Klienci>
+
+@{
+    ViewBag.Title = "ClientTable";
+}
+
+<h2>Client List</h2>
+
+<p>
+    @using (Html.BeginForm("ClientTable", "Order", FormMethod.Get))
+    {
+    <p>
+        Last Name: @Html.TextBox("SearchLastNm")
+        <input type="submit" value="Filter" />
+    </p>
+}
+    @using (Html.BeginForm())
+    {
+        <div class="form-group" style="float:right">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Next" class="btn btn-default" />
+            </div>
+        </div>
+    }
+</p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Imie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nazwisko)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pesel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adres)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Imie)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nazwisko)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pesel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefon)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Adres)
+                </td>
+                <td>
+                    @Html.ActionLink("Select", "Select", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>

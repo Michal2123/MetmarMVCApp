@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetmarMVCApp", "MetmarMVCApp\MetmarMVCApp.csproj", "{1E90261A-E1F7-4790-B6F5-32AAE1AD573E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E90261A-E1F7-4790-B6F5-32AAE1AD573E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E90261A-E1F7-4790-B6F5-32AAE1AD573E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E90261A-E1F7-4790-B6F5-32AAE1AD573E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E90261A-E1F7-4790-B6F5-32AAE1AD573E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0978C6FF-D15F-4700-B521-346FEDDE40D8}
+	EndGlobalSection
+EndGlobal

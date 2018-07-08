@@ -1,0 +1,84 @@
+﻿@model IEnumerable<MetmarMVCApp.Models.Przedmioty>
+
+@{
+    ViewBag.Title = "ItemTable";
+}
+
+<h2>Index</h2>
+
+<p>
+    @using (Html.BeginForm("ItemTable", "Order", FormMethod.Get))
+    {
+    <p>
+        Category: @Html.DropDownList("categoryName", "All")
+        Nazwa: @Html.TextBox("SearchString")
+        <input type="submit" value="Filter" />
+    </p>
+}
+    @using (Html.BeginForm())
+    {
+        <div class="form-group" style="float:right">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Next" class="btn btn-default" />
+            </div>
+        </div>
+    }
+    </p>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Kategorie.Nazwa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nazwa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kaucja)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StawkaDzien)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StawkaGodzinowa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cena)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Wartosc)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kategorie.Nazwa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nazwa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kaucja)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StawkaDzien)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StawkaGodzinowa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cena)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Wartosc)
+                </td>
+                <td>
+                    @Html.ActionLink("Add", "AddToOrderDetails", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
